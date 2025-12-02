@@ -1,0 +1,70 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.venv/
+env/
+*.egg-info/
+
+# -----------------------------
+# Jupyter
+# -----------------------------
+.ipynb_checkpoints/
+
+# -----------------------------
+# Data & Models (handled by DVC)
+# -----------------------------
+# Ignore all large data & model files — DVC will track them
+data/
+models/
+artifacts/
+
+# Keep DVC pointer files
+!data/*.dvc
+!models/*.dvc
+!artifacts/*.dvc
+
+# -----------------------------
+# DVC cache
+# -----------------------------
+.dvc/cache/
+.dvc/tmp/
+
+# -----------------------------
+# MLflow
+# -----------------------------
+# MLflow local storage
+mlruns/
+mlflow.db
+mlflow.db-journal
+
+# -----------------------------
+# Logs
+# -----------------------------
+logs/
+*.log
+
+# -----------------------------
+# Build / temp files
+# -----------------------------
+tmp/
+temp/
+*.tmp
+*.bak
+
+# -----------------------------
+# IDE files
+# -----------------------------
+.vscode/
+.idea/
+
+# -----------------------------
+# OS-specific
+# -----------------------------
+.DS_Store
+Thumbs.db
