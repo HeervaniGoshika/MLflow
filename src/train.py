@@ -1,9 +1,12 @@
 import mlflow
 import mlflow.sklearn
+import joblib
 from sklearn.datasets import load_wine
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
+from sklearn.svm import SVC
+
 
 mlflow.set_tracking_uri("sqlite:///mlflow.db")
 
@@ -45,3 +48,8 @@ with mlflow.start_run():
     mlflow.sklearn.log_model(model, name="model")
 
     print("Accuracy:", acc)
+
+model = SVC()
+model.fit(X_train, y_train)
+
+joblib.dump(model, "model.pkl")
