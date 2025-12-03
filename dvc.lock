@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/Wine.csv
+      hash: md5
+      md5: e2e57e4c41e6ee0213fb12e5a70f4bfb
+      size: 78057
+    - path: src/train.py
+      hash: md5
+      md5: 6f26c28bd60e9acaea374e1c38d2ce9a
+      size: 1410
+    outs:
+    - path: model.pkl
+      hash: md5
+      md5: 9be2f40435836596df7ca9ba37ef24b6
+      size: 14899
